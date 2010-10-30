@@ -1,0 +1,22 @@
+{
+  // Required
+  "name": "Average Reputation for Stack Exchange websites",
+  "version": "0.1",
+  
+  "icons": {
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+
+  "description": "Allows you to see the average reputation for a selection in the reputation graph on the Stack Exchange network, by the click of a *new* button.",
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/users/*?tab=reputationhistory"],
+      "js": ["avgrep.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
